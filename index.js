@@ -241,7 +241,7 @@ async function main(){
         
         // Get latest date
         const get_date_query = `SELECT postdate FROM posts
-        ORDER BY postdate DESC
+        WHERE postdate = '2020-11-29'
         LIMIT 1;`;
         let result = await client.query(get_date_query);
         const latestDate = result.rows[0].postdate;
