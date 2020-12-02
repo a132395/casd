@@ -175,7 +175,7 @@ async function updateDB(){
     ON CONFLICT 
     DO NOTHING;`;
 
-    for (let i = 1 ; i<= 10 ; i++){
+    for (let i = 1 ; i<= 1 ; i++){
         //
         const promises = [];
         try{
@@ -241,7 +241,8 @@ async function main(){
         
         // Get latest date
         const get_date_query = `SELECT postdate FROM posts
-        WHERE postdate = '2020-11-28'
+        WHERE postdate = '2020-11-27'
+	ORDER BY postdate DESC
         LIMIT 1;`;
         let result = await client.query(get_date_query);
         const latestDate = result.rows[0].postdate;
