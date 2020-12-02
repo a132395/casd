@@ -184,9 +184,12 @@ async function updateDB(){
             const $ = cheerio.load(html);
             // console.log($("tbody[id^='normalthread'] > tr").length);
             const trs = $("tbody[id^='normalthread'] > tr > th > a.xst");
+            console.log(trs)
             trs.each((index,element)=>{
                 const href = $(element).attr('href');
+		console.log(href)
                 const text = $(element).text();
+		console.log(text)
                 const sibling = $(element).parent().next();
                 let postDate;
                 if ($(sibling).find('em > span > span').attr('title')){
