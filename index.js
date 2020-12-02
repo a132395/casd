@@ -184,7 +184,6 @@ async function updateDB(){
             const $ = cheerio.load(html);
             // console.log($("tbody[id^='normalthread'] > tr").length);
             const trs = $("tbody[id^='normalthread'] > tr > th > a.xst");
-            console.log(trs)
             trs.each((index,element)=>{
                 const href = $(element).attr('href');
 		console.log(href)
