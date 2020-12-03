@@ -243,8 +243,7 @@ async function main(){
         
         // Get latest date
         const get_date_query = `SELECT postdate FROM posts
-        WHERE postdate < '2020-11-28'
-	AND postdate > '2020-11-23'
+        WHERE postdate < '2020-08-11'
 	AND downloaded = false
 	ORDER BY postdate DESC
         LIMIT 1;`;
