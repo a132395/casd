@@ -71,7 +71,7 @@ async function main(){
     //const forumPrefix = match[1];
     //const maxPageNumber = parseInt(match[2]);
     const forumPrefix = 'forum.php?mod=forumdisplay&fid=36&typeid=368&filter=typeid&typeid=368&page='
-    const maxPageNumber = 165
+    const maxPageNumber = 187
 
     console.log('Checking new posts...');
     const query_text = `INSERT INTO posts (url,title,postdate,downloaded)
@@ -80,7 +80,7 @@ async function main(){
     ON CONFLICT 
     DO NOTHING;`;
     // let visted = false;
-    for (let i = 1 ; i<= 165 ; i++){
+    for (let i = 3 ; i<= 187 ; i++){
         //
         
         const promises = [];
